@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/w"
+    android:orientation="vertical"
+    tools:context=".zeroingwpn">
+
+
+    <Button
+        android:id="@+id/b_start2"
+        android:layout_width="221dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/rounded_button"
+        android:text="Zero with different value"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_start" />
+
+    <ListView
+        android:id="@+id/lv_paired_devices"
+        android:layout_width="299dp"
+        android:layout_height="147dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary"
+        android:divider="#ff22"
+        android:listSelector="#27e233"
+        app:layout_constraintBottom_toTopOf="@+id/t_test"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="165dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="Paired Devices:"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lv_paired_devices"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/b_start"
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/rounded_button"
+        android:text="Zero with func value"
+        app:layout_constraintBottom_toTopOf="@+id/b_start2"
+        app:layout_constraintEnd_toStartOf="@+id/editText_ver"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editText_ver"
+        app:layout_constraintTop_toBottomOf="@+id/editText_ver" />
+
+    <TextView
+        android:id="@+id/vertical_Error"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/editText_hor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_Error" />
+
+    <TextView
+        android:id="@+id/horizontal_Error"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/vertical_Error"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/t_test" />
+
+    <EditText
+        android:id="@+id/editText_hor"
+        android:layout_width="224dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Enter Horizontal Correction"
+        android:inputType="textPersonName|number|numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/editText_ver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vertical_Error" />
+
+    <EditText
+        android:id="@+id/editText_ver"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:ems="10"
+        android:hint="Enter Vertical Correction"
+        android:inputType="textPersonName|numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/b_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_hor" />
+
+    <TextView
+        android:id="@+id/t_test"
+        android:layout_width="199dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="3dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_Error"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lv_paired_devices" />
+
+</android.support.constraint.ConstraintLayout>
